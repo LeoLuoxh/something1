@@ -1,4 +1,3 @@
-import matplotlib.patches as pat
 import matplotlib.pyplot as plt
 import numpy as np
 from matplotlib.animation import FuncAnimation
@@ -29,6 +28,7 @@ class planet:
         self.v[0]+=self.a/r_val*(other.pos[0]-self.pos[0])
         self.v[1]+=self.a/r_val*(other.pos[1]-self.pos[1])
         self.v[2]+=self.a/r_val*(other.pos[2]-self.pos[2])
+        
     def update_loc(self,time):
         self.pos+=self.v*time
         self.t.append(self.pos.tolist())
@@ -70,7 +70,7 @@ def update(f):
             c[k][j].set_data([pl[j].pos[g[k][0]]],[pl[j].pos[g[k][1]]])#
 ani=FuncAnimation(fig,update,frames=np.arange(0,3600*24),interval=1)
 plt.show()
-
+#It is just for play.
 
     
    
