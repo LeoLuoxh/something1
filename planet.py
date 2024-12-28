@@ -70,7 +70,7 @@ def update(f):
             c[k][j].set_data([pl[j].pos[g[k][0]]],[pl[j].pos[g[k][1]]])#
 ani=FuncAnimation(fig,update,frames=np.arange(0,3600*24),interval=1)
 plt.show()
-#It is just for play.
+#It is just for playing.
 
     
    
